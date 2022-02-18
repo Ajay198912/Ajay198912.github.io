@@ -18,6 +18,16 @@
       pf("create", "LB-FBEBF5DC-1");
       pf("_env", "development");
     </script>
+    <script>
+      window.addEventListener('message', function (e) {
+    // Get the sent data
+    const data = e.data;
+console.log(JSON.parse(data));
+    // If you encode the message in JSON before sending them,
+    // then decode here
+    // const decoded = JSON.parse(data);
+});
+    </script>
   </head>
   <body>
     <iframe src="http://buzzdata.buzzdata.local:4000/test-1?lb-mode=preview" width="200" height="200"></iframe>
