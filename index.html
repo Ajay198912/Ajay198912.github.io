@@ -65,8 +65,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
    window.addEventListener('message', function (e) {
     // Get the sent data
    console.log(e);
-   if(e) {
-      const data = JSON.parse(e.data);
+   const data = JSON.parse(e.data);
+   if(data.contentUrl) {
     var modal = document.getElementById("myModal");
     if(data.contentUrl) {
         var myIframe= document.getElementById('myIframe');
