@@ -60,35 +60,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
       })(window, document, "script", "http://localhost:8080/jukebox.js", "pf");
       pf("create", "LB-FBEBF5DC-1");
       pf("_env", "development");
-    </script>
     
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-    <script>
-      window.addEventListener('message', function (e) {
+   window.addEventListener('message', function (e) {
     // Get the sent data
-   if(e.data) {
+   console.log(e);
+   if(e) {
       const data = JSON.parse(e.data);
     var modal = document.getElementById("myModal");
     if(data.contentUrl) {
