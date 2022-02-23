@@ -77,11 +77,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
      function readMessage(e) {
        console.log(e, "eeeeee");
        console.log(e.data.contentUrl, "eee dataaa");
-       if(e.data.contentUrl) {
-         console.log(data.contentUrl, "data.contentUrl");
+       const contentUrl = e.data.contentUrl;
+       if(contentUrl) {
+         console.log(contentUrl, "data.contentUrl");
           var modal = document.getElementById("myModal");
           var myIframe= document.getElementById('myIframe');
-          myIframe.src = data.contentUrl;
+          myIframe.src = contentUrl;
           modal.style.display = "block";
        }
     }
