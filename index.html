@@ -18,24 +18,22 @@
         x.parentNode.insertBefore(o, x);
       })(window, document, "script", "http://localhost:8080/jukebox.js", "pf");
       pf("create", "LB-FBEBF5DC-1");
-      pf("_env", "development");          
-    </script>
-  </head>
-  <body>
-    <a href="#" id="contentOverlay" data-lookbook-overlay-href="" data-lookbook-overlay-width="80%" data-lookbook-overlay-height="80%"></a>
-    <iframe src="http://buzzdata.buzzdata.local:4000/test-1?lb-mode=preview" width="100%" height="200"></iframe>
-  </body>
-  <script>
-     function readMessage(e) {
+      pf("_env", "development");  
+  function readMessage(e) {
        var contentUrl = e.data.contentUrl;
        if(contentUrl) {
           var contentOverlay= document.getElementById('contentOverlay');
           contentOverlay.setAttribute("data-lookbook-overlay-href", contentUrl);
           contentOverlay.click();
        }
-    }
+   }
   document.addEventListener('DOMContentLoaded', function () {
    window.addEventListener('message', readMessage, false);
   });      
-  </script>
+    </script>
+  </head>
+  <body>
+    <a href="#" id="contentOverlay" data-lookbook-overlay-href="" data-lookbook-overlay-width="80%" data-lookbook-overlay-height="80%" style="display:none" ></a>
+    <iframe src="http://buzzdata.buzzdata.local:4000/test-1?lb-mode=preview" width="100%" height="200"></iframe>
+  </body>
 </html>
