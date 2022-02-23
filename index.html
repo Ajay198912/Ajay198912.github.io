@@ -30,7 +30,7 @@
        var contentUrl = e.data.contentUrl;
        if(contentUrl) {
           var contentOverlay= document.getElementById('contentOverlay');
-          contentOverlay.data-lookbook-overlay-href = contentUrl;
+          contentOverlay.setAttribute("data-lookbook-overlay-href", contentUrl);
           contentOverlay.click();
        }
     }
