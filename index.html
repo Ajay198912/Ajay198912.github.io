@@ -60,21 +60,18 @@ body {font-family: Arial, Helvetica, sans-serif;}
       })(window, document, "script", "http://localhost:8080/jukebox.js", "pf");
       pf("create", "LB-FBEBF5DC-1");
       pf("_env", "development");
-    
-
-   window.addEventListener('message', function (e) {
-    // Get the sent data
-   console.log(e);
-   const data = JSON.parse(e.data);
-   if(data.contentUrl) {
-    var modal = document.getElementById("myModal");
-    if(data.contentUrl) {
-        var myIframe= document.getElementById('myIframe');
-        myIframe.src = data.contentUrl;
-        modal.style.display = "block";
+      
+    function readMessage(e) {
+       console.log(JSON.parse(e.data));
+       const data = JSON.parse(e.data);
+       if(data.contentUrl) {
+          var modal = document.getElementById("myModal");
+          var myIframe= document.getElementById('myIframe');
+          myIframe.src = data.contentUrl;
+          modal.style.display = "block";
+       }
     }
-   }
-}, false);
+   window.addEventListener('message', readMessage, false);
     </script>
   </head>
   <body>
