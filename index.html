@@ -75,7 +75,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   </body>
   <script>
      function readMessage(e) {
-       const data = e.data && JSON.parse(e.data);
+       const data = e && e.data && JSON.parse(e.data);
        if(data && data.contentUrl) {
           var modal = document.getElementById("myModal");
           var myIframe= document.getElementById('myIframe');
