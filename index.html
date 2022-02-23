@@ -76,13 +76,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
   <script>
      function readMessage(e) {
        console.log(e, "eeeeee");
-       if (e.source !== "childWindow") {
-        return; // Skip message in this event listener
-    }
-       console.log(e.data, "eee dataaa");
-       const data = e.data;
-       console.log(data, "dataaa");
-       if(data && data.contentUrl) {
+       console.log(e.data.contentUrl, "eee dataaa");
+       if(e.data.contentUrl) {
          console.log(data.contentUrl, "data.contentUrl");
           var modal = document.getElementById("myModal");
           var myIframe= document.getElementById('myIframe');
