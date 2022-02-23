@@ -19,17 +19,7 @@
       })(window, document, "script", "http://localhost:8080/jukebox.js", "pf");
       pf("create", "LB-FBEBF5DC-1");
       pf("_env", "development");  
-  function readMessage(e) {
-       var contentUrl = e.data.contentUrl;
-       if(contentUrl) {
-          var contentOverlay= document.getElementById('contentOverlay');
-          contentOverlay.setAttribute("data-lookbook-overlay-href", contentUrl);
-          contentOverlay.click();
-       }
-   }
-  document.addEventListener('DOMContentLoaded', function () {
-   window.addEventListener('message', readMessage, false);
-  });      
+  function readMessage(e){var t=e.data.contentUrl;if(t){var n=document.getElementById("contentOverlay");n.setAttribute("data-lookbook-overlay-href",t),n.click()}}document.addEventListener("DOMContentLoaded",function(){window.addEventListener("message",readMessage,!1)});     
     </script>
   </head>
   <body>
