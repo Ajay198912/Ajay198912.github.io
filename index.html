@@ -80,7 +80,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     }
        console.log(e, "eeeeee");
        console.log(e.data, "eee dataaa");
-       const data = JSON.parse(e.data);
+       const data = e.data;
        console.log(data, "dataaa");
        if(data && data.contentUrl) {
          console.log(data.contentUrl, "data.contentUrl");
