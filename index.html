@@ -75,11 +75,15 @@ body {font-family: Arial, Helvetica, sans-serif;}
   </body>
   <script>
      function readMessage(e) {
+       if (message.source !== childWindow) {
+        return; // Skip message in this event listener
+    }
        console.log(e, "eeeeee");
        console.log(e.data, "eee dataaa");
        const data = JSON.parse(e.data);
        console.log(data, "dataaa");
        if(data && data.contentUrl) {
+         console.log(data.contentUrl, "data.contentUrl");
           var modal = document.getElementById("myModal");
           var myIframe= document.getElementById('myIframe');
           myIframe.src = data.contentUrl;
