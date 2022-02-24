@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-   
+    <script src="https://app.cdn.lookbookhq.com/libraries/overlay/overlay.js"></script>
+   <link href="https://app.cdn.lookbookhq.com/libraries/overlay/overlay.css" rel="stylesheet" type="text/css">
     <script type="text/javascript">
       (function (j, u, k, e, b, o, x) {
         j["pfObject"] = b;
@@ -18,9 +19,11 @@
       })(window, document, "script", "http://localhost:8080/jukebox.js", "pf");
       pf("create", "LB-FBEBF5DC-1");
       pf("_env", "development");  
+      document.addEventListener("DOMContentLoaded",function(){window.addEventListener("message",function(e){var t=e.data.contentUrl;if(t){var n=document.getElementById("contentOverlay");n.setAttribute("data-lookbook-overlay-href",t),n.click()}},!1)});
     </script>
   </head>
   <body>
+    <a href="#" id="contentOverlay" data-lookbook-overlay-href="" data-lookbook-overlay-width="80%" data-lookbook-overlay-height="80%" style="display:none" ></a>
     <div style="height:200px">
       <p>NVIDIA AI Enterprise  is  an end-to-end, cloud-native suite of  AI and data analytics software,  optimized, certified, and supported by NVIDIA to run on VMware vSphere  with  NVIDIA-Certified  Systems<sup>™</sup>.  It includes key enabling technologies  from NVIDIA for  rapid deployment, management, and scaling of AI workloads  in the modern hybrid cloud.</p>
       <p>NVIDIA AI Enterprise  is  an end-to-end, cloud-native suite of  AI and data analytics software,  optimized, certified, and supported by NVIDIA to run on VMware vSphere  with  NVIDIA-Certified  Systems<sup>™</sup>.  It includes key enabling technologies  from NVIDIA for  rapid deployment, management, and scaling of AI workloads  in the modern hybrid cloud.</p>
